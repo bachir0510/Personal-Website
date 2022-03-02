@@ -5,17 +5,19 @@ import MenuSider from "../components/admin/menuSider/MenuSider";
 import "./layoutAdmin.scss";
 
 export default function LayoutAdmin(props) {
-  const [manuCollapsed, setMenuCollapsed] = useState(false);
+  const [menuCollapsed, setMenuCollapsed] = useState(false);
   const { children } = props;
   const { Header, Content, Footer } = Layout;
+  const style = { marginLeft: menuCollapsed ? "80px" : "200px" };
+
   return (
     <Layout>
-      <MenuSider manuCollapsed={manuCollapsed} />
-      <Layout className="l-admin">
+      <MenuSider manuCollapsed={menuCollapsed} />
+      <Layout className="l-admin" style={style}>
         <Header className="l-admin__header">
           <MenuTop
-          // manuCollapsed={manuCollapsed}
-          // setManuCollapsed={setMenuCollapsed}
+            menuCollapsed={menuCollapsed}
+            setMenuCollapsed={setMenuCollapsed}
           />
         </Header>
         <Content className="l-admin__content"> {children}</Content>
