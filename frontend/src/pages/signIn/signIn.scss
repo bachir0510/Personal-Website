@@ -1,0 +1,19 @@
+@import "../../sass/index.scss";
+
+.sign-in {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+
+    &-logo {
+      padding: 45px 20px;
+      img {
+        width: 100%;
+      }
+    }
+    &-tabs {
+    }
+  }
+}

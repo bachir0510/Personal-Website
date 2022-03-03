@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import routes from "./config/router";
 import NotFount from "./pages/NotFount";
+
 import "./App.scss";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             }
           />
         ))}
+
         <Route path="*" element={<NotFount />} />
       </Routes>
     </BrowserRouter>

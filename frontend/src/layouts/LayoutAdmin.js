@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
 import { Layout } from "antd";
 import MenuTop from "../components/admin/menuTop/MenuTop";
 import MenuSider from "../components/admin/menuSider/MenuSider";
@@ -8,7 +9,15 @@ export default function LayoutAdmin(props) {
   const [menuCollapsed, setMenuCollapsed] = useState(false);
   const { children } = props;
   const { Header, Content, Footer } = Layout;
+
   const style = { marginLeft: menuCollapsed ? "80px" : "200px" };
+
+  // const user = null;
+  // if (!user) {
+  //   <>
+  //     <Navigate to="/login" />
+  //   </>;
+  // }
 
   return (
     <Layout>

@@ -1,6 +1,6 @@
 import LayoutAdmin from "../layouts/LayoutAdmin";
 import Admin from "../pages/admin/Admin";
-import SignIn from "../pages/admin/SignIn";
+import SignIn from "../pages/signIn/SignIn";
 import LayoutClint from "../layouts/LayoutClint";
 import Home from "../pages/Home";
 import Contact from "../pages/Contact";
